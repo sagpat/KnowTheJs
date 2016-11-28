@@ -1,0 +1,1 @@
+window.varName = window.varName || 'This is var in lib 2';
