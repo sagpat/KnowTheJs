@@ -41,8 +41,8 @@ c.get();
 // the above pattern for the 'this' is fixed by assigning the 'this' to other object self.
 
 var d = {
-    a_name : 'This is js object',
-    b_name : 'this is fun',
+    aname : 'This is js object',
+    bname : 'this is fun',
     get: function()
     {                                
         var self = this;   // since the self point to the same memory location as the both are objects and self easily gets mutate. 
