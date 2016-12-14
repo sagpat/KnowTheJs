@@ -1,0 +1,49 @@
+var AddName = {
+
+firstname: "Sagar",
+lastname: "Patil",
+CombineName: function(){
+
+	console.log(this.firstname + ' ' + this.lastname);
+
+  }
+
+}
+
+
+function getName(var1, var2){
+
+console.log("lang: " + var1 + " " + var2);
+console.log(this.CombineName());
+
+
+}
+
+// Bind
+var getFullName = getName.bind(AddName);
+getFullName('Eng', 'Esp');
+
+
+// Apply - It takes the arguments as array.
+console.log(getName.apply(AddName, ['English', 'Spanish']));
+
+
+// Call
+console.log(getName.call(AddName, 'Hindi', 'Marathi'));
+
+
+
+// function or method borrowing
+
+var getNewNames = {
+
+firstname: "Alan",
+lastname: "Garner"
+
+}
+
+var NewNameIs = AddName.CombineName.bind(getNewNames);
+NewNameIs();
+
+
+
